@@ -32,19 +32,4 @@ window.addEventListener("scroll", function () {
     }
 });
 
-let lastScroll = 0;
-const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        // Scroll ke bawah → navbar hilang
-        navbar.style.transform = "translateY(-100%)";
-    } else {
-        // Scroll ke atas → navbar muncul
-        navbar.style.transform = "translateY(0)";
-    }
-
-    lastScroll = currentScroll;
-});
